@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+html {
+  font-size: 100%;
+  font-family: inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body {
+  width: 100vw;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+input,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.card {
+  max-width: 600px;
+  padding: 1.5rem;
+  margin: 4rem auto 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 8px rgba(84, 70, 35, 0.15);
+          box-shadow: 0 2px 8px rgba(84, 70, 35, 0.15);
+}
+
+.card .title__name {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.todo__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.todo__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1.5rem;
+}
+
+.todo__input .text {
+  width: 140px;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.todo__input .text::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__input .text:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__input .text::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__input .text::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__select select,
+.todo__select option {
+  margin: 0;
+  padding: 0;
+}
+
+.todo__select select {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 0.1875rem;
+}
+
+.todo__list > :not(:last-child) {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+}
+
+.todo__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+
+.todo__item input {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__item input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__item input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__item input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__item input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.todo__item p {
+  width: 100%;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.todo__item .item-button {
+  min-width: 40px;
+  margin-left: 0.5rem;
+}
+
+.todo__item .item-button :not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.todo__item .item-button > :last-child {
+  padding-right: 0.5rem;
+}
+
+.todo__item .item-button svg {
+  width: 16px;
+  height: 16px;
+  fill: rgba(0, 0, 0, 0.4);
+}
+
+.todo__item .item-button .complete-btn,
+.todo__item .item-button .trash-btn {
+  visibility: hidden;
+}
+
+.todo__item:hover .complete-btn,
+.todo__item:hover .trash-btn {
+  visibility: visible;
+}
+
+.button {
+  width: 16px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.button svg {
+  width: 16px;
+  height: 16px;
+  fill: rgba(0, 0, 0, 0.4);
+}
+
+.button:hover svg {
+  fill: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=styles.css.map */
