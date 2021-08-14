@@ -208,6 +208,13 @@ li {
   visibility: visible;
 }
 
+@media screen and (max-width: 480px) {
+  .todo__item .item-button .complete-btn,
+  .todo__item .item-button .trash-btn {
+    visibility: visible;
+  }
+}
+
 .button {
   width: 16px;
   height: 16px;

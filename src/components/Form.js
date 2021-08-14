@@ -41,7 +41,7 @@ const Form = (props) => {
             className="text"
             placeholder="Add new task"
             onChange={handleInputChange}
-            autoFocus
+            // autoFocus
           />
           <button className="button" type="submit" onClick={handleInputClick}>
             <PlusIcon />
