@@ -74,7 +74,7 @@ const Item = ({ edit, text, todo, todos, setTodos }) => {
   }
 
   return (
-    <li className="todo__item" onDoubleClick={handleDoubleClick}>
+    <div className="todo__item" onDoubleClick={handleDoubleClick}>
       {todo.edit === true ? (
         <>
           <input
@@ -116,7 +116,7 @@ const Item = ({ edit, text, todo, todos, setTodos }) => {
           </div>
         </>
       )}
-    </li>
+    </div>
   );
 };
 

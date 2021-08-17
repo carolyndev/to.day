@@ -68,7 +68,7 @@ li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -92,7 +92,7 @@ li {
   padding-left: 0.5rem;
   margin-right: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  border-radius: 4px;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -120,15 +120,17 @@ li {
 
 .todo__select select {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  border-radius: 4px;
   color: rgba(0, 0, 0, 0.4);
   padding: 0.1875rem;
 }
 
-.todo__list > :not(:last-child) {
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+.todo__list > * {
+  border: 1px solid transparent;
+}
+
+.todo__list > *:hover {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 .todo__item {
@@ -145,6 +147,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.5rem 0.5rem;
   color: rgba(0, 0, 0, 0.6);
   width: 100%;
 }
@@ -155,6 +158,7 @@ li {
   font-family: inherit;
   font-size: inherit;
   color: rgba(0, 0, 0, 0.4);
+  background-color: inherit;
 }
 
 .todo__item input::-webkit-input-placeholder {

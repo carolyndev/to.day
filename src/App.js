@@ -11,7 +11,6 @@ const App = () => {
   const [edit, setEdit] = useState(false);
 
   // effects
-
   // run once when app starts
   useEffect(() => {
     getLocalTodos();
@@ -70,6 +69,7 @@ const App = () => {
         <List
           edit={edit}
           filteredTodos={filteredTodos}
+          setFilteredTodos={setFilteredTodos}
           todos={todos}
           setEdit={setEdit}
           setTodos={setTodos}
