@@ -16,7 +16,7 @@ const Form = (props) => {
         {
           text: inputText,
           completed: false,
-          id: Math.random() * 1000,
+          id: Math.floor(Math.random() * 10000),
           edit: false,
         },
       ]);
@@ -50,8 +50,7 @@ const Form = (props) => {
 
         <div className="todo__select">
           <select name="todos" id="filter-todo" onChange={handleStatus}>
-            <option value="filter">Filter by:</option>
-            <option value="all">All</option>
+            <option value="all">Filter by:</option>
             <option value="complete">Complete</option>
             <option value="incomplete">Incomplete</option>
           </select>
