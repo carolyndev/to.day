@@ -56,6 +56,7 @@ const App = () => {
       <div className="card">
         <div className="title">
           <h1 className="title__name">My To-Do List</h1>
+          <button className="theme-toggle"></button>
         </div>
 
         <Form

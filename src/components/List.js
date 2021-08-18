@@ -11,6 +11,7 @@ const List = (props) => {
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
     setFilteredTodos(items);
+    setTodos(items);
   }
 
   return (
