@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+:root {
+  --bg-color: rgba(0, 0, 0, 0.03);
+  --bg-hover: rgba(0, 0, 0, 0.03);
+  --bdr-color: rgba(0, 0, 0, 0.1);
+  --card-color: #ffffff;
+  --primary-color: rgba(0, 0, 0, 0.4);
+  --secondary-color: rgba(0, 0, 0, 0.6);
+  --title-text: rgba(0, 0, 0, 0.8);
+  --box-shadow: rgba(84, 70, 35, 0.25);
+  --toggle-shadow: rgba(0, 0, 0, 0);
+}
+
+[data-theme='dark'] {
+  --bg-color: #2f3437;
+  --bg-hover: #474c50;
+  --bdr-color: #474c50;
+  --card-color: #363c3f;
+  --primary-color: #9d9fa0;
+  --secondary-color: #9d9fa0;
+  --title-text: #eaebea;
+  --box-shadow: rgba(0, 0, 0, 0.15);
+  --toggle-shadow: rgba(0, 0, 0, 0.15);
+}
+
 *,
 *::before,
 *::after {
@@ -17,6 +41,7 @@ html {
 
 body {
   width: 100vw;
+  background-color: var(--bg-color);
 }
 
 body,
@@ -45,15 +70,72 @@ li {
   max-width: 600px;
   padding: 1.5rem;
   margin: 4rem auto 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--card-color);
   border-radius: 4px;
-  -webkit-box-shadow: 0 2px 8px rgba(84, 70, 35, 0.15);
-          box-shadow: 0 2px 8px rgba(84, 70, 35, 0.15);
+  -webkit-box-shadow: 0 2px 12px var(--box-shadow);
+          box-shadow: 0 2px 12px var(--box-shadow);
+}
+
+.card .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.card .title #theme-checkbox {
+  display: none;
+}
+
+.card .title .slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-left: auto;
+  width: 56px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: var(--bdr-color);
+  cursor: pointer;
+  -webkit-box-shadow: 0 0px 2px var(--toggle-shadow);
+          box-shadow: 0 0px 2px var(--toggle-shadow);
+}
+
+.card .title .toggle-off::after,
+.card .title .toggle-on::after {
+  content: '';
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--card-color);
+  position: absolute;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: 2px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card .title .toggle-on::after {
+  left: 32px;
+  -webkit-mask-image: url(../images/dark.svg);
+          mask-image: url(../images/dark.svg);
+  background-size: 100%;
+  top: 1px;
 }
 
 .card .title__name {
-  margin-bottom: 1rem;
   font-size: 1.5rem;
+  color: var(--title-text);
 }
 
 .todo__form {
@@ -69,7 +151,7 @@ li {
           justify-content: space-between;
   padding-bottom: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--bdr-color);
 }
 
 .todo__input {
@@ -83,33 +165,36 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  max-width: 276px;
   margin-right: 1.5rem;
 }
 
 .todo__input .text {
-  width: 140px;
+  width: 100%;
   padding: 0.25rem;
   padding-left: 0.5rem;
   margin-right: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--card-color);
+  border: 1px solid var(--bdr-color);
   border-radius: 4px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--secondary-color);
 }
 
 .todo__input .text::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .todo__input .text:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .todo__input .text::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .todo__input .text::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .todo__select select,
@@ -119,9 +204,10 @@ li {
 }
 
 .todo__select select {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: inherit;
+  border: 1px solid var(--bdr-color);
   border-radius: 4px;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
   padding: 0.1875rem;
 }
 
@@ -130,7 +216,7 @@ li {
 }
 
 .todo__list > *:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: var(--bg-hover);
 }
 
 .todo__item {
@@ -147,9 +233,9 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem 0.5rem;
-  color: rgba(0, 0, 0, 0.6);
   width: 100%;
+  padding: 0.5rem 0.5rem;
+  color: var(--secondary-color);
 }
 
 .todo__item input {
@@ -157,24 +243,24 @@ li {
   border: none;
   font-family: inherit;
   font-size: inherit;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
   background-color: inherit;
 }
 
 .todo__item input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .todo__item input:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .todo__item input::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .todo__item input::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .todo__item p {
@@ -199,7 +285,7 @@ li {
 .todo__item .item-button svg {
   width: 16px;
   height: 16px;
-  fill: rgba(0, 0, 0, 0.4);
+  fill: var(--primary-color);
 }
 
 .todo__item .item-button .complete-btn,
@@ -225,22 +311,22 @@ li {
   background: none;
   border: none;
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--primary-color);
 }
 
 .button svg {
   width: 16px;
   height: 16px;
-  fill: rgba(0, 0, 0, 0.4);
+  fill: var(--primary-color);
 }
 
 .button:hover svg {
-  fill: rgba(0, 0, 0, 0.8);
-  color: rgba(0, 0, 0, 0.8);
+  fill: var(--title-text);
+  color: var(--title-text);
 }
 
 .completed {
   text-decoration: line-through;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--bdr-color);
 }
 /*# sourceMappingURL=styles.css.map */
