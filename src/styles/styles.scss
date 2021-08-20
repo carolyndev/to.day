@@ -293,4 +293,5 @@ li {
 .completed {
   text-decoration: line-through;
   color: var(--bdr-color);
+  filter: brightness(1.1);
 }

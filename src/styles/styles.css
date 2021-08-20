@@ -328,5 +328,7 @@ li {
 .completed {
   text-decoration: line-through;
   color: var(--bdr-color);
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 /*# sourceMappingURL=styles.css.map */
