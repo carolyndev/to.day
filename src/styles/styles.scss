@@ -1,11 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 // COLORS
-$xlt: rgba(0, 0, 0, 0.03);
-$lt: rgba(0, 0, 0, 0.1);
-$lt-gr: rgba(0, 0, 0, 0.4);
-$md-gr: rgba(0, 0, 0, 0.6);
-$dk-gr: rgba(0, 0, 0, 0.8);
+:root {
+  --bg-color: rgba(0, 0, 0, 0.03);
+  --bg-hover: rgba(0, 0, 0, 0.03);
+  --bdr-color: rgba(0, 0, 0, 0.1);
+  --card-color: #ffffff;
+  --primary-color: rgba(0, 0, 0, 0.4);
+  --secondary-color: rgba(0, 0, 0, 0.6);
+  --title-text: rgba(0, 0, 0, 0.8);
+  --box-shadow: rgba(84, 70, 35, 0.25);
+  --toggle-shadow: rgba(0, 0, 0, 0);
+}
+
+// theme
+[data-theme='dark'] {
+  --bg-color: #2f3437;
+  --bg-hover: #474c50;
+  --bdr-color: #474c50;
+  --card-color: #363c3f;
+  --primary-color: #9d9fa0;
+  --secondary-color: #9d9fa0;
+  --title-text: #eaebea;
+  --box-shadow: rgba(0, 0, 0, 0.15);
+  --toggle-shadow: rgba(0, 0, 0, 0.15);
+}
 
 // sizing
 $b-rad: 4px;
@@ -28,6 +47,7 @@ html {
 
 body {
   width: 100vw;
+  background-color: var(--bg-color);
 }
 
 body,
@@ -56,14 +76,62 @@ li {
   max-width: 600px;
   padding: 1.5rem;
   margin: 4rem auto 0;
-  border: 1px solid $lt;
+  background-color: var(--card-color);
   border-radius: $b-rad;
-  box-shadow: 0 2px 8px rgba(84, 70, 35, 0.15);
+  box-shadow: 0 2px 12px var(--box-shadow);
 
   .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+
+    #theme-checkbox {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin-left: auto;
+      width: 56px;
+      height: 26px;
+      border-radius: 20px;
+      background-color: var(--bdr-color);
+      cursor: pointer;
+      box-shadow: 0 0px 2px var(--toggle-shadow);
+    }
+
+    .toggle-off::after,
+    .toggle-on::after {
+      content: '';
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: var(--card-color);
+      position: absolute;
+      top: 2px;
+      right: 0;
+      bottom: 0;
+      left: 2px;
+      transition: all 0.3s ease-in-out;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .toggle-on::after {
+      left: 32px;
+      mask-image: url(../images/dark.svg);
+      background-size: 100%;
+      top: 1px;
+    }
+
     &__name {
-      margin-bottom: 1rem;
       font-size: 1.5rem;
+      color: var(--title-text);
     }
   }
 }
@@ -75,26 +143,29 @@ li {
     justify-content: space-between;
     padding-bottom: 2rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid $lt;
+    border-bottom: 1px solid var(--bdr-color);
   }
 
   &__input {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
+    max-width: 276px;
     margin-right: 1.5rem;
 
     .text {
-      width: 140px;
+      width: 100%;
       padding: 0.25rem;
       padding-left: 0.5rem;
       margin-right: 0.5rem;
-      border: 1px solid $lt;
+      background-color: var(--card-color);
+      border: 1px solid var(--bdr-color);
       border-radius: $b-rad;
-      color: $md-gr;
+      color: var(--secondary-color);
 
       &::placeholder {
-        color: $lt-gr;
+        color: var(--primary-color);
       }
     }
   }
@@ -105,10 +176,12 @@ li {
       margin: 0;
       padding: 0;
     }
+
     select {
-      border: 1px solid $lt;
+      background-color: inherit;
+      border: 1px solid var(--bdr-color);
       border-radius: $b-rad;
-      color: $lt-gr;
+      color: var(--primary-color);
       padding: 0.1875rem;
     }
   }
@@ -118,9 +191,7 @@ li {
       border: 1px solid transparent;
 
       &:hover {
-        background-color: $xlt;
-        // border-top: 1px solid $lt;
-        // border-bottom: 1px solid $lt;
+        background-color: var(--bg-hover);
       }
     }
   }
@@ -130,20 +201,20 @@ li {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0.5rem;
-    color: $md-gr;
     width: 100%;
+    padding: 0.5rem 0.5rem;
+    color: var(--secondary-color);
 
     input {
       width: 100%;
       border: none;
       font-family: inherit;
       font-size: inherit;
-      color: $lt-gr;
+      color: var(--primary-color);
       background-color: inherit;
 
       &::placeholder {
-        color: $lt-gr;
+        color: var(--primary-color);
       }
     }
 
@@ -168,7 +239,7 @@ li {
       svg {
         width: 16px;
         height: 16px;
-        fill: $lt-gr;
+        fill: var(--primary-color);
       }
 
       .complete-btn,
@@ -203,23 +274,23 @@ li {
   background: none;
   border: none;
   cursor: pointer;
-  color: $lt-gr;
+  color: var(--primary-color);
 
   svg {
     width: 16px;
     height: 16px;
-    fill: $lt-gr;
+    fill: var(--primary-color);
   }
 
   &:hover {
     svg {
-      fill: $dk-gr;
-      color: $dk-gr;
+      fill: var(--title-text);
+      color: var(--title-text);
     }
   }
 }
 
 .completed {
   text-decoration: line-through;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--bdr-color);
 }

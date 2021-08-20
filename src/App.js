@@ -9,13 +9,15 @@ const App = () => {
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [edit, setEdit] = useState(false);
+  const [defaultTheme, setDefaultTheme] = useState(true);
 
   // effects
-  // run once when app starts
+  // [] instructs to run once when app starts
   useEffect(() => {
     getLocalTodos();
   }, []);
 
+  // will run again with todos or status changes when app starts
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
@@ -54,12 +56,9 @@ const App = () => {
   return (
     <div className="container">
       <div className="card">
-        <div className="title">
-          <h1 className="title__name">My To-Do List</h1>
-          <button className="theme-toggle"></button>
-        </div>
-
         <Form
+          defaultTheme={defaultTheme}
+          setDefaultTheme={setDefaultTheme}
           inputText={inputText}
           todos={todos}
           setInputText={setInputText}
@@ -68,6 +67,7 @@ const App = () => {
         />
 
         <List
+          status={status}
           edit={edit}
           filteredTodos={filteredTodos}
           setFilteredTodos={setFilteredTodos}

@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ReactComponent as PlusIcon } from '../images/plus.svg';
 
 const Form = (props) => {
-  const { inputText, setInputText, todos, setTodos, setStatus } = props;
+  const {
+    defaultTheme,
+    setDefaultTheme,
+    inputText,
+    setInputText,
+    todos,
+    setTodos,
+    setStatus,
+  } = props;
+
+  useEffect(() => {
+    getLocalTheme();
+  }, []);
+
   const handleInputChange = (e) => {
     setInputText(e.target.value);
   };
 
   const handleInputClick = (e) => {
     e.preventDefault();
-    console.log('clicked submit button');
+    console.log('add task');
     if (inputText) {
       setTodos([
         ...todos,
@@ -31,8 +44,47 @@ const Form = (props) => {
     console.log('filter by: ' + e.target.value);
   };
 
+  const handleToggleClick = (e) => {
+    setDefaultTheme(!defaultTheme);
+    if (defaultTheme === true) {
+      saveLocalTheme('dark');
+    } else {
+      saveLocalTheme('light');
+    }
+  };
+
+  const saveLocalTheme = (mode) => {
+    document.documentElement.setAttribute('data-theme', mode);
+    localStorage.setItem('theme', mode);
+  };
+
+  const getLocalTheme = () => {
+    let themeLocal = localStorage.getItem('theme');
+    document.documentElement.setAttribute('data-theme', themeLocal);
+    if (themeLocal === null || themeLocal === 'light') {
+      setDefaultTheme(true);
+    } else {
+      setDefaultTheme(false);
+    }
+  };
+
   return (
     <>
+      <div className="title">
+        <h1 className="title__name">My To-Do List</h1>
+
+        <div
+          className={`slider ${
+            defaultTheme === false ? 'toggle-on' : 'toggle-off'
+          }`}
+          id="theme-toggle"
+          onClick={handleToggleClick}
+        >
+          {/* <label htmlFor="theme-btn"></label> */}
+          <input type="checkbox" id="theme-checkbox" />
+        </div>
+      </div>
+
       <form className="todo__form">
         <div className="todo__input">
           <input
