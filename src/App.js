@@ -1,11 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import List from './components/List';
+import Options from './components/Options';
+
+const defaultTodos = [
+  {
+    text: 'hello, welcome to my to-do list app!',
+    completed: false,
+    id: 1,
+    edit: false,
+  },
+  {
+    text: 'tips and tricks:',
+    completed: false,
+    id: 2,
+    edit: false,
+  },
+  {
+    text: '- hover to see all options',
+    completed: false,
+    id: 3,
+    edit: false,
+  },
+  {
+    text: '- double-click to edit',
+    completed: false,
+    id: 4,
+    edit: false,
+  },
+  {
+    text: '- drag and drop items to reorder your list',
+    completed: false,
+    id: 5,
+    edit: false,
+  },
+];
 
 const App = () => {
   // states
   const [inputText, setInputText] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(defaultTodos);
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [edit, setEdit] = useState(false);
@@ -65,7 +99,6 @@ const App = () => {
           setTodos={setTodos}
           setStatus={setStatus}
         />
-
         <List
           status={status}
           edit={edit}
@@ -74,6 +107,11 @@ const App = () => {
           todos={todos}
           setEdit={setEdit}
           setTodos={setTodos}
+        />
+        <Options
+          todos={todos}
+          setTodos={setTodos}
+          defaultTodos={defaultTodos}
         />
       </div>
     </div>

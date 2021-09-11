@@ -1,4 +1,3 @@
-import React from 'react';
 import Item from '../components/Item';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
@@ -18,43 +17,45 @@ const List = (props) => {
   }
 
   return (
-    <DragDropContext onDragEnd={handleDragEnd}>
-      <Droppable droppableId="droppableList">
-        {(provided) => (
-          <ul
-            className="todo__list"
-            {...provided.droppableProps}
-            ref={provided.innerRef}
-          >
-            {filteredTodos.map((todo, index) => (
-              <Draggable
-                key={todo.id}
-                draggableId={todo.id.toString()}
-                index={index}
-              >
-                {(provided) => (
-                  <li
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
-                    ref={provided.innerRef}
-                  >
-                    <Item
-                      id={todo.id}
-                      text={todo.text}
-                      todo={todo}
-                      todos={todos}
-                      setTodos={setTodos}
-                    />
-                  </li>
-                )}
-              </Draggable>
-            ))}
+    <>
+      <DragDropContext onDragEnd={handleDragEnd}>
+        <Droppable droppableId="droppableList">
+          {(provided) => (
+            <ul
+              className="todo__list"
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+            >
+              {filteredTodos.map((todo, index) => (
+                <Draggable
+                  key={todo.id}
+                  draggableId={todo.id.toString()}
+                  index={index}
+                >
+                  {(provided) => (
+                    <li
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      ref={provided.innerRef}
+                    >
+                      <Item
+                        id={todo.id}
+                        text={todo.text}
+                        todo={todo}
+                        todos={todos}
+                        setTodos={setTodos}
+                      />
+                    </li>
+                  )}
+                </Draggable>
+              ))}
 
-            {provided.placeholder}
-          </ul>
-        )}
-      </Droppable>
-    </DragDropContext>
+              {provided.placeholder}
+            </ul>
+          )}
+        </Droppable>
+      </DragDropContext>
+    </>
   );
 };
 

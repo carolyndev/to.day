@@ -58,7 +58,7 @@ const Item = ({ edit, text, todo, todos, setTodos }) => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
 
-  function handleBlur() {
+  function handleInputBlur() {
     setTodos(
       todos.map((item) => {
         if (item.id === todo.id) {
@@ -81,7 +81,7 @@ const Item = ({ edit, text, todo, todos, setTodos }) => {
             value={userChanges}
             placeholder="Edit your task"
             onKeyDown={saveTask}
-            onBlur={handleBlur}
+            onBlur={handleInputBlur}
             onChange={handleChange}
             autoFocus
           />

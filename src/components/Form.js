@@ -16,6 +16,11 @@ const Form = (props) => {
     getLocalTheme();
   }, []);
 
+  const generateKey = (input) => {
+    const inputTime = new Date().getTime();
+    return `${input}_${inputTime}`;
+  };
+
   const handleInputChange = (e) => {
     setInputText(e.target.value);
   };
@@ -29,7 +34,7 @@ const Form = (props) => {
         {
           text: inputText,
           completed: false,
-          id: Math.floor(Math.random() * 10000),
+          id: generateKey(inputText),
           edit: false,
         },
       ]);
@@ -90,7 +95,7 @@ const Form = (props) => {
           <input
             value={inputText}
             type="text"
-            className="text"
+            className="input-text"
             placeholder="Add new task"
             onChange={handleInputChange}
             // autoFocus
