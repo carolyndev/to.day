@@ -5,7 +5,7 @@ import Options from './components/Options';
 
 const defaultTodos = [
   {
-    text: 'hello, welcome to my to-do list app!',
+    text: "hello, welcome to Today's Todos!",
     completed: false,
     id: 1,
     edit: false,
