@@ -463,7 +463,7 @@ li {
 .completed {
   text-decoration: line-through;
   color: var(--bdr-color);
-  -webkit-filter: brightness(1.1);
-          filter: brightness(1.1);
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
 }
 /*# sourceMappingURL=styles.css.map */
