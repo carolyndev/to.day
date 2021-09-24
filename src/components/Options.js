@@ -6,8 +6,8 @@ import { ReactComponent as XIcon } from '../images/delete.svg';
 import { ReactComponent as ResetIcon } from '../images/reset.svg';
 
 const Options = (props) => {
-  const { todos, setTodos, defaultTodos } = props;
-  const [toggleOptions, setToggleOptions] = useState(false);
+  const { todos, setTodos, defaultTodos, toggleOptions, setToggleOptions } =
+    props;
 
   function toggleOptionsMenu() {
     setToggleOptions(!toggleOptions);
@@ -48,6 +48,9 @@ const Options = (props) => {
         className={
           toggleOptions === true ? 'options-menu show-options' : 'options-menu'
         }
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
         <div id="options-title">More Options</div>
         <div className="complete" id="complete" onClick={completeAll}>

@@ -44,6 +44,7 @@ const App = () => {
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [edit, setEdit] = useState(false);
   const [defaultTheme, setDefaultTheme] = useState(true);
+  const [toggleOptions, setToggleOptions] = useState(false);
 
   // effects
   // [] instructs to run once when app starts
@@ -87,8 +88,14 @@ const App = () => {
     }
   };
 
+  function closeOptionsMenu() {
+    if (toggleOptions === true) {
+      setToggleOptions(false);
+    }
+  }
+
   return (
-    <div className="container">
+    <div className="container" onClick={closeOptionsMenu}>
       <div className="card">
         <Form
           defaultTheme={defaultTheme}
@@ -112,6 +119,8 @@ const App = () => {
           todos={todos}
           setTodos={setTodos}
           defaultTodos={defaultTodos}
+          toggleOptions={toggleOptions}
+          setToggleOptions={setToggleOptions}
         />
       </div>
     </div>
