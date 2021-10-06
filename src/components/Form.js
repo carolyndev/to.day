@@ -76,7 +76,7 @@ const Form = (props) => {
   return (
     <>
       <div className="title">
-        <h1 className="title__name">Today's Todos</h1>
+        <h1 className="title__name">to.day</h1>
 
         <div
           className={`slider ${
