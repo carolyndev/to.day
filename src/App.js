@@ -5,7 +5,7 @@ import Options from './components/Options';
 
 const defaultTodos = [
   {
-    text: "hello, welcome to Today's Todos!",
+    text: 'hello, this is to.day!',
     completed: false,
     id: 1,
     edit: false,
@@ -17,13 +17,13 @@ const defaultTodos = [
     edit: false,
   },
   {
-    text: '- hover to see all options',
+    text: '- hover to see more options',
     completed: false,
     id: 3,
     edit: false,
   },
   {
-    text: '- double-click to edit',
+    text: '- double-click to edit your item',
     completed: false,
     id: 4,
     edit: false,

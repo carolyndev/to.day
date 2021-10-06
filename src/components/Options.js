@@ -14,6 +14,7 @@ const Options = (props) => {
   }
   function deleteAll() {
     setTodos([]);
+    setToggleOptions(false);
   }
   function completeAll() {
     setTodos(
@@ -24,6 +25,7 @@ const Options = (props) => {
         };
       })
     );
+    setToggleOptions(false);
   }
   function incompleteAll() {
     setTodos(
@@ -34,9 +36,11 @@ const Options = (props) => {
         };
       })
     );
+    setToggleOptions(false);
   }
   function defaultList() {
     setTodos(defaultTodos);
+    setToggleOptions(false);
   }
 
   return (
