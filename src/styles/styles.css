@@ -16,8 +16,8 @@
   --bg-hover: #474c50;
   --bdr-color: #474c50;
   --card-color: #363c3f;
-  --primary-color: #9d9fa0;
-  --secondary-color: #9d9fa0;
+  --primary-color: rgba(157, 159, 160, 0.6);
+  --secondary-color: rgba(157, 159, 160, 1);
   --title-text: #eaebea;
   --box-shadow: rgba(0, 0, 0, 0.15);
   --toggle-shadow: rgba(0, 0, 0, 0.15);
@@ -462,8 +462,6 @@ li {
 
 .completed {
   text-decoration: line-through;
-  color: var(--bdr-color);
-  -webkit-filter: brightness(1.5);
-          filter: brightness(1.5);
+  color: var(--primary-color);
 }
 /*# sourceMappingURL=styles.css.map */
