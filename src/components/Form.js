@@ -85,7 +85,6 @@ const Form = (props) => {
           id="theme-toggle"
           onClick={handleToggleClick}
         >
-          {/* <label htmlFor="theme-btn"></label> */}
           <input type="checkbox" id="theme-checkbox" />
         </div>
       </div>
@@ -98,7 +97,6 @@ const Form = (props) => {
             className="input-text"
             placeholder="Add new task"
             onChange={handleInputChange}
-            // autoFocus
           />
           <button className="button" type="submit" onClick={handleInputClick}>
             <PlusIcon />
