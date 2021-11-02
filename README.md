@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+## to.day - daily task manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Designed and built by Carolyn Lau
 
-## Available Scripts
+To.day allows the user to manage their daily tasks in a clean manner. As a create-read-update-delete (CRUD) app, users are able to:
 
-In the project directory, you can run:
+1. Add tasks using the input field.
+2. Reorder item positions via drag and drop.
+3. View items by completion status with the 'Filter by:' menu.
+4. Edit tasks by double-clicking each item.
+5. Mark as complete or delete tasks by selecting the respective icon on the item's hover state.
+6. Toggle between light and dark mode using the sliding togggle switch.
+7. Access more actions via the options menu (indicated by a horizontal ellipsis `...`).
 
-### `npm start`
+All tasks are saved to local storage.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Screenshots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![to.day light mode](./src/images/screenshots/light-to.day.png)
+![to.day dark mode](./src/images/screenshots/dark-to.day.png)
 
-### `npm test`
+### Built with
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- SCSS
+- React JS Library [[React]](https://reactjs.org/)
+- Bootstrapped with [[Create React App]](https://github.com/facebook/create-react-app)
+- Drag and drop functionality [[react-beautiful-dnd]](https://github.com/atlassian/react-beautiful-dnd)
 
-### `npm run build`
+### Set-up
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository to your desktop. [[https://github.com/the-cl/room.git]](https://github.com/the-cl/room.git)
+2. From your device's terminal, `cd` into the project directory.
+3. Run `npm start` to open the app in the development mode and view it in your browser. [[localhost:3000]](http://localhost:3000)
+4. Run `npm run build` to create your optimized production build.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Project Goals and Challenges
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Aside from the foundational CRUD functions, I wanted the ability to reorder items by drag and drop functionality, and to have task items to persist even on page refresh. I accomplished these goals by integrating the `react-beautiful-dnd` library and the `localStorage` property respectively.
 
-### `npm run eject`
+To efficiently render multiples of the same component, and to manage the rendered UI based on state, the React library was the tool of choice. As a first time React user, learning the `useState` and `useEffect` hooks were the biggest challenges, but proved integral to managing my rendered components based on state.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Continued development
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I will continue to improve on best practices for organizing my code and components, specifically separating the presentational and logical components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Some additional features to expand the project include:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- adding custom tags/categories
+- allowing users to pin/star important items to the top
+- searching for tasks that include the user query
 
-## Learn More
+### Acknowledgements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Design inspired by [[Notion.so]](notion.so).
