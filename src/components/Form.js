@@ -27,7 +27,6 @@ const Form = (props) => {
 
   const handleInputClick = (e) => {
     e.preventDefault();
-    console.log('add task');
     if (inputText) {
       setTodos([
         ...todos,
@@ -46,7 +45,6 @@ const Form = (props) => {
 
   const handleStatus = (e) => {
     setStatus(e.target.value);
-    console.log('filter by: ' + e.target.value);
   };
 
   const handleToggleClick = (e) => {
