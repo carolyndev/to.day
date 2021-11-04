@@ -2,6 +2,8 @@
 
 #### Designed and built by Carolyn Lau
 
+### Overview
+
 To.day allows the user to manage their daily tasks in a clean manner. As a create-read-update-delete (CRUD) app, users are able to:
 
 1. Add tasks using the input field.
@@ -14,7 +16,11 @@ To.day allows the user to manage their daily tasks in a clean manner. As a creat
 
 All tasks are saved to local storage.
 
-#### Screenshots
+#### View Live Site
+
+Live site URL: [[to.day]](https://the-cl.github.io/todo-app/)
+
+### Screenshots
 
 ![to.day light mode](./src/images/screenshots/light-to.day.png)
 ![to.day dark mode](./src/images/screenshots/dark-to.day.png)
