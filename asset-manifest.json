@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/todo-app/static/css/main.6662f5e7.chunk.css",
-    "main.js": "/todo-app/static/js/main.76af3e56.chunk.js",
-    "main.js.map": "/todo-app/static/js/main.76af3e56.chunk.js.map",
-    "runtime-main.js": "/todo-app/static/js/runtime-main.5b8007d7.js",
-    "runtime-main.js.map": "/todo-app/static/js/runtime-main.5b8007d7.js.map",
-    "static/js/2.128d7757.chunk.js": "/todo-app/static/js/2.128d7757.chunk.js",
-    "static/js/2.128d7757.chunk.js.map": "/todo-app/static/js/2.128d7757.chunk.js.map",
-    "index.html": "/todo-app/index.html",
-    "static/css/main.6662f5e7.chunk.css.map": "/todo-app/static/css/main.6662f5e7.chunk.css.map",
-    "static/js/2.128d7757.chunk.js.LICENSE.txt": "/todo-app/static/js/2.128d7757.chunk.js.LICENSE.txt",
-    "static/media/check.e1ab9025.svg": "/todo-app/static/media/check.e1ab9025.svg",
-    "static/media/styles.css": "/todo-app/static/media/dark.788500be.svg",
-    "static/media/delete.1bd59743.svg": "/todo-app/static/media/delete.1bd59743.svg",
-    "static/media/ellipsis.43000943.svg": "/todo-app/static/media/ellipsis.43000943.svg",
-    "static/media/plus.eeb769bd.svg": "/todo-app/static/media/plus.eeb769bd.svg",
-    "static/media/reset.d9b4ef98.svg": "/todo-app/static/media/reset.d9b4ef98.svg",
-    "static/media/trash.54667865.svg": "/todo-app/static/media/trash.54667865.svg"
+    "main.css": "/to.day/static/css/main.d40fa4cc.chunk.css",
+    "main.js": "/to.day/static/js/main.76af3e56.chunk.js",
+    "main.js.map": "/to.day/static/js/main.76af3e56.chunk.js.map",
+    "runtime-main.js": "/to.day/static/js/runtime-main.6461ee6f.js",
+    "runtime-main.js.map": "/to.day/static/js/runtime-main.6461ee6f.js.map",
+    "static/js/2.128d7757.chunk.js": "/to.day/static/js/2.128d7757.chunk.js",
+    "static/js/2.128d7757.chunk.js.map": "/to.day/static/js/2.128d7757.chunk.js.map",
+    "index.html": "/to.day/index.html",
+    "static/css/main.d40fa4cc.chunk.css.map": "/to.day/static/css/main.d40fa4cc.chunk.css.map",
+    "static/js/2.128d7757.chunk.js.LICENSE.txt": "/to.day/static/js/2.128d7757.chunk.js.LICENSE.txt",
+    "static/media/check.e1ab9025.svg": "/to.day/static/media/check.e1ab9025.svg",
+    "static/media/styles.css": "/to.day/static/media/dark.788500be.svg",
+    "static/media/delete.1bd59743.svg": "/to.day/static/media/delete.1bd59743.svg",
+    "static/media/ellipsis.43000943.svg": "/to.day/static/media/ellipsis.43000943.svg",
+    "static/media/plus.eeb769bd.svg": "/to.day/static/media/plus.eeb769bd.svg",
+    "static/media/reset.d9b4ef98.svg": "/to.day/static/media/reset.d9b4ef98.svg",
+    "static/media/trash.54667865.svg": "/to.day/static/media/trash.54667865.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b8007d7.js",
+    "static/js/runtime-main.6461ee6f.js",
     "static/js/2.128d7757.chunk.js",
-    "static/css/main.6662f5e7.chunk.css",
+    "static/css/main.d40fa4cc.chunk.css",
     "static/js/main.76af3e56.chunk.js"
   ]
 }
