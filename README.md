@@ -1,6 +1,6 @@
 ## to.day - daily task manager
 
-#### Designed and built by Carolyn Lau
+Designed and built by Carolyn Lau
 
 ### Overview
 
@@ -16,9 +16,9 @@ To.day allows the user to manage their daily tasks in a clean manner. As a creat
 
 All tasks are saved to local storage.
 
-#### View Live Site
+### View Live Site
 
-Live site URL: [[to.day]](https://the-cl.github.io/todo-app/)
+Live site URL: [[carolyndev.github.io/todo-app]](https://carolyndev.github.io/todo-app/)
 
 ### Screenshots
 
@@ -34,7 +34,7 @@ Live site URL: [[to.day]](https://the-cl.github.io/todo-app/)
 
 ### Set-up
 
-1. Clone this repository to your desktop. [[https://github.com/the-cl/room.git]](https://github.com/the-cl/room.git)
+1. Clone this repository to your desktop. [[https://github.com/carolyndev/room.git]](https://github.com/carolyndev/room.git)
 2. From your device's terminal, `cd` into the project directory.
 3. Run `npm start` to open the app in the development mode and view it in your browser. [[localhost:3000]](http://localhost:3000)
 4. Run `npm run build` to create your optimized production build.
