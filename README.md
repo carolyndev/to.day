@@ -18,7 +18,7 @@ All tasks are saved to local storage.
 
 ### View Live Site
 
-Live site URL: [[carolyndev.github.io/todo-app]](https://carolyndev.github.io/todo-app/)
+Live site URL: [[carolyndev.github.io/to.day]](https://carolyndev.github.io/to.day/)
 
 ### Screenshots
 
